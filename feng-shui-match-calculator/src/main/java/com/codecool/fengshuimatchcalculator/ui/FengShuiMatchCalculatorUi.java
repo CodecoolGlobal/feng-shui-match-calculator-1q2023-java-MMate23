@@ -4,6 +4,8 @@ import com.codecool.fengshuimatchcalculator.model.Match;
 import com.codecool.fengshuimatchcalculator.service.MatchCalculator;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FengShuiMatchCalculatorUi {
@@ -11,6 +13,7 @@ public class FengShuiMatchCalculatorUi {
     private final MatchCalculator matchCalculator;
 
     public FengShuiMatchCalculatorUi(MatchCalculator matchCalculator) {
+
         this.matchCalculator = matchCalculator;
     }
 
@@ -28,8 +31,16 @@ public class FengShuiMatchCalculatorUi {
     }
 
     private LocalDate getBirthDate(int person) {
-        // Implement the method to get the birthdate for each person
-        return null;
+        LocalDate userDate = null;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter birthdate(yyyy-MM-dd):");
+        try {
+            String userInput = scan.nextLine();
+            userDate = LocalDate.parse(userInput);
+        }catch (InputMismatchException ex ){
+            System.out.println("NOPE" + ex);
+        }
+        return userDate;
     }
 }
 

@@ -22,15 +22,13 @@ public class PersonaProviderImpl implements PersonaProvider {
             new Persona(Sign.DOG, new Sign[]{Sign.TIGER, Sign.HORSE, Sign.DOG}, new Sign[]{Sign.DRAGON, Sign.ROOSTER}),
             new Persona(Sign.PIG, new Sign[]{Sign.RABBIT, Sign.GOAT, Sign.PIG}, new Sign[]{Sign.SNAKE, Sign.MONKEY})
     );
-
     @Override
-    public Persona findPersona(Sign sign) {
+   public Persona findPersona(Sign sign) {
         for (Persona zodiacPersona : personas) {
-            if (zodiacPersona.Sign() == sign) {
+            if (zodiacPersona.sign() == sign) {
                 return zodiacPersona;
             }
         }
-
         throw new RuntimeException("Sign: " + sign + " not found");
     }
 }
