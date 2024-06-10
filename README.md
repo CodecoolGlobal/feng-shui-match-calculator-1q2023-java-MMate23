@@ -35,8 +35,6 @@
 * ![Java][Java]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### Features 
 
@@ -44,8 +42,6 @@
 - Analyzes compatibility between two Zodiac signs.
 - Demonstrates Single Responsibility Principle, Interface Segregation Principle, and Dependency Injection.
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Installation 
@@ -62,6 +58,7 @@
 
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
